@@ -144,7 +144,7 @@ const Navbar = () => {
                                           x="0"
                                           y="0"
                                           viewBox="21.674999999999997 28.653000000000002 55.44900000000001 42.56999999999999"
-                                          enable-background="new 0 0 100 100"
+                                          enableBackground="new 0 0 100 100"
                                           xmlSpace="preserve"
                                           height="97.65570914244374"
                                           width="127.20017421281102"
