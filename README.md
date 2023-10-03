@@ -2,7 +2,7 @@
 
 Built with the Next.js 13.5 App Router, tRPC, TypeScript, Prisma & Tailwind
 
-Features
+## Features
 
 - Complete SaaS Built From Scratch
 - Stripe integration
