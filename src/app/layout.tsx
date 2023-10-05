@@ -1,12 +1,14 @@
-import { cn } from "@/lib/utils";
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/Navbar";
 import Providers from "@/components/Providers";
+import { Metadata } from "next";
+import { cn } from "@/lib/utils";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
 import "react-loading-skeleton/dist/skeleton.css";
+import "simplebar-react/dist/simplebar.min.css";
+
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +27,7 @@ export default function RootLayout({
       <Providers>
         <body
           className={cn(
-            "min-h-screen font-sans antialiased grainy",
+            "max-h-[800px] font-sans antialiased grainy",
             inter.className
           )}
         >
