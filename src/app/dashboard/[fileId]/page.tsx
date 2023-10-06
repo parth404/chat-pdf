@@ -28,7 +28,7 @@ const Page = async ({ params }: PageProps) => {
 
   if (!file) notFound();
 
-  // const plan = await getUserSubscriptionPlan();
+  // const plan = await getUserSubscriptionPlan()
 
   return (
     <div className="flex-1 justify-between flex flex-col h-[calc(100vh-3.5rem)]">
@@ -42,7 +42,7 @@ const Page = async ({ params }: PageProps) => {
         </div>
 
         <div className="shrink-0 flex-[0.75] border-t border-gray-200 lg:w-96 lg:border-l lg:border-t-0">
-          <ChatWrapper isSubscribed={false} fileId={file.id} />
+          <ChatWrapper isSubscribed={true} fileId={file.id} />
         </div>
       </div>
     </div>
