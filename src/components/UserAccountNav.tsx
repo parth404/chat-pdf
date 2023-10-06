@@ -1,3 +1,4 @@
+import { getUserSubscriptionPlan } from "@/lib/stripe";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,6 +25,8 @@ const UserAccountNav = async ({
   imageUrl,
   name,
 }: UserAccountNavProps) => {
+  const subscriptionPlan = await getUserSubscriptionPlan();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild className="overflow-visible">
@@ -67,9 +70,13 @@ const UserAccountNav = async ({
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild>
-          <Link href="/pricing">
-            Upgrade <Gem className="text-blue-600 h-4 w-4 ml-1.5" />
-          </Link>
+          {subscriptionPlan?.isSubscribed ? (
+            <Link href="/dashboard/billing">Manage Subscription</Link>
+          ) : (
+            <Link href="/pricing">
+              Upgrade <Gem className="text-blue-600 h-4 w-4 ml-1.5" />
+            </Link>
+          )}
         </DropdownMenuItem>
 
         <DropdownMenuSeparator />
