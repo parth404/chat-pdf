@@ -66,7 +66,7 @@ const ChatWrapper = ({ isSubscribed, fileId }: ChatWrapperProps) => {
               anymore. I will setup a new vector database soon. This is now just
               a pdf viewer.
             </p>
-            {/* <p className="text-zinc-500 text-sm">
+            <p className="text-zinc-500 text-sm">
               Your{" "}
               <span className="font-medium">
                 {isSubscribed ? "Pro" : "Free"}
@@ -76,7 +76,7 @@ const ChatWrapper = ({ isSubscribed, fileId }: ChatWrapperProps) => {
                 ? PLANS.find((p) => p.name === "Pro")?.pagesPerPdf
                 : PLANS.find((p) => p.name === "Free")?.pagesPerPdf}{" "}
               pages per PDF.
-            </p> */}
+            </p>
             <Link
               href="/dashboard"
               className={buttonVariants({
